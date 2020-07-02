@@ -1,0 +1,27 @@
+.about {
+  //border-top: 1px solid $dark-gray;
+  text-align: center;
+
+  &-subtitle {
+    color: $gray;
+  }
+  &__content {
+    text-align: left;
+    margin-top: 70px;
+    &-item {
+      width: calc(50% - 80px);
+      padding: 40px;
+      h3 {
+        color: $yellow;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      p {
+        padding: 7px 0;
+        :first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

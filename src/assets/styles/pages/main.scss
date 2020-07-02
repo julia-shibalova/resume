@@ -1,0 +1,50 @@
+.main {
+  &-content {
+    
+  }
+  &__title {
+    text-align: center;
+    padding-top: 70px;
+  }
+  &__banner {
+    background-size: cover;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5)),url('../../assets/images/me.jpg');
+    h2 {
+      font-size: 72px;
+    }
+    p {
+      font-size: 22px;
+      color: $gray;
+    }
+    &-content {
+      height: 100%;
+    }
+    button[type="submit"] {
+      margin-top: 40px;
+    }
+  }
+
+}
+
+@media (max-width: $desktop-big) {
+  .main {
+  }
+}
+
+@media (max-width: $desktop-little) {
+  .main {
+    
+  }
+}
+  
+@media (max-width: $tablet) {
+  .main {
+    
+  }
+}
+
+@media (max-width: $phone) {
+  .main {
+    
+  }
+}

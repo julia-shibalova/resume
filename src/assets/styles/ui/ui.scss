@@ -1,0 +1,62 @@
+.smooth-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: $black;
+  .arrow {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & > span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      position: relative;
+      transition: 0.5s;
+      &:before {
+        background-color: $black;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 11px;
+        height: 2px;
+        top: calc(50% - 4px);
+        right: 0;
+        transform: rotate(35deg);
+      }
+      &:after {
+        background-color: $black;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 11px;
+        height: 2px;
+        bottom: calc(50% - 4px);
+        right: 0;
+        transform: rotate(-35deg);
+      }
+    }
+  }
+  &:hover {
+    .arrow {
+      width: 50px;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .smooth-arrow {
+    .arrow {
+      width: 35px;
+    }
+    &:hover {
+      .arrow {
+        width: 40px;
+      }
+    }
+  }
+}

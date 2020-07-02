@@ -1,0 +1,38 @@
+.footer {
+  border-top: 1px solid $dark-gray;
+  padding: 20px 0;
+  &__inner {
+    font-size: 16px;
+    color: $dark-gray;
+    justify-content: space-between;
+    align-items: center;
+  }
+  background: $black;
+  color: $gray;
+  position: relative;
+
+  &__lang {
+    margin-bottom: 0;
+
+    button[type="submit"] {
+      min-width: 25px;
+      padding: 5px;
+    }
+  }
+  
+}
+
+@media(max-width: $tablet) {
+  .footer {
+    &__lang {
+      margin-right: 45px;
+
+      button[type="submit"] {
+        min-width: 20px;
+        padding: 3px;
+        margin-bottom: 3px;
+        font-size: 14px;
+      }
+    }
+  }
+}

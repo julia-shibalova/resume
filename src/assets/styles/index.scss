@@ -1,0 +1,27 @@
+// includes
+@import './includes/variables.scss';
+@import './includes/fonts.scss';
+@import './includes/common.scss';
+// ui
+@import './ui/ui.scss';
+@import './ui/inputs.scss';
+// components
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/contact.scss';
+// pages
+@import './pages/main.scss';
+@import './pages/education.scss';
+@import './pages/about.scss';
+@import './pages/projects.scss';
+
+// z-indexes
+.header {
+  z-index: 200;
+  &-burger {
+    z-index: 2;
+  }
+  &-mobile {
+    z-index: 1;
+  }
+}
