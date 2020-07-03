@@ -8,7 +8,7 @@
         <div 
           v-on:mouseover="mouseover" 
           v-on:mouseleave="mouseleave" 
-          class="item"
+          class="item item__2"
         >
           <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message" >
             <div class="smooth-arrow">
@@ -21,9 +21,9 @@
         <div 
           v-on:mouseover="mouseover1" 
           v-on:mouseleave="mouseleave1" 
-          class="item"
+          class="item item__4"
         >
-          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message1" >
+          <a href="http://novosib-m.ru/" target="_blank" class="item-shadow flex-center"  v-show="message1" >
             <div class="smooth-arrow">
               <p>перейти</p>
               <div class="rightarrow"><span></span></div>
@@ -34,9 +34,9 @@
         <div 
           v-on:mouseover="mouseover2" 
           v-on:mouseleave="mouseleave2" 
-          class="item"
+          class="item item__5"
         >
-          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message2" >
+          <a href="http://yantar.in/" target="_blank" class="item-shadow flex-center" v-show="message2" >
             <div class="smooth-arrow">
               <p>перейти</p>
               <div class="rightarrow"><span></span></div>
@@ -47,9 +47,9 @@
         <div 
           v-on:mouseover="mouseover3" 
           v-on:mouseleave="mouseleave3" 
-          class="item"
+          class="item item__3"
         >
-          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message3" >
+          <a href="https://simulatos.com/" target="_blank" class="item-shadow flex-center" v-show="message3" >
             <div class="smooth-arrow">
               <p>перейти</p>
               <div class="rightarrow"><span></span></div>
@@ -60,7 +60,7 @@
         <div 
           v-on:mouseover="mouseover4" 
           v-on:mouseleave="mouseleave4" 
-          class="item"
+          class="item item__1"
         >
           <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message4" >
             <div class="smooth-arrow">
