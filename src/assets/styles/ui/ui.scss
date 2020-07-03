@@ -4,7 +4,7 @@
   justify-content: space-between;
   font-size: 14px;
   color: $black;
-  .arrow {
+  .rightarrow {
     width: 45px;
     display: flex;
     align-items: center;
@@ -14,11 +14,11 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: $black;
+      background-color: $white;
       position: relative;
       transition: 0.5s;
       &:before {
-        background-color: $black;
+        background-color: $white;
         content: '';
         display: block;
         position: absolute;
@@ -29,7 +29,7 @@
         transform: rotate(35deg);
       }
       &:after {
-        background-color: $black;
+        background-color: $white;
         content: '';
         display: block;
         position: absolute;
@@ -42,15 +42,48 @@
     }
   }
   &:hover {
-    .arrow {
+    .rightarrow {
       width: 50px;
     }
   }
 }
 
+// link-arrow
+.link-arrow {
+  // outline: $outline;
+  width: 50px; height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid $white;
+  position: relative;
+  transition: 0.2s;
+  span {
+      background: $white;
+      position: absolute;
+      //left: calc(50% - 5px);
+      width: 12px; height: 1px;
+  }
+  span:first-child {
+      top: 51%; right: 30%;
+      transform: rotate(135deg);
+  }
+  span:nth-child(2) {
+      bottom: calc(50% - 2px);
+      left: 30%;
+      transform: rotate(-135deg);
+  }
+  &:hover {
+      background: $white;
+      span {
+          background: $black;
+      }
+  }
+}
+
+
 @media (max-width: $phone) {
   .smooth-arrow {
-    .arrow {
+    .rightarrow {
       width: 35px;
     }
     &:hover {

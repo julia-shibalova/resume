@@ -24,9 +24,9 @@
 
       </div>
     </div>
-    <!--div class="flex-center arrow">
-      <a href="#projects"><font-awesome-icon :icon="['fas', 'arrow-down']" /></a>
-    </div-->
+    <div class="flex-center arrow">
+      <a href="#projects" class="link-arrow"><span></span><span></span></a>
+    </div>
 
     
   </div>

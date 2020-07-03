@@ -6,13 +6,13 @@
           <h2 v-text="$ml.get('main_name')"/>
           <p class="main__banner-subtitle" v-text="$ml.get('main_subtitle')"/>
           <div class="form-group">
-            <a href="../../assets/images/Resume.pdf" download><button type="submit" v-text="$ml.get('main_button')" /></a>
+            <a :href="require('../../assets/images/me.jpg')" target="_blank" download><button type="submit" v-text="$ml.get('main_button')" /></a>
           </div>
           
         </div>
 
         <div class="flex-center arrow">
-          <a href="#about"><font-awesome-icon :icon="['fas', 'arrow-down']" /></a>
+          <a href="#about" class="link-arrow"><span></span><span></span></a>
         </div>
       </div>
     </div>
@@ -24,20 +24,20 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+//import { library } from '@fortawesome/fontawesome-svg-core';
+//import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import About from './Components/About/About';
 import Projects from './Components/Projects/Projects';
 import Education from './Components/Education/Education';
 
-library.add(faArrowDown);
+//library.add(faArrowDown);
 
 export default ({
   name: 'Main',
   components: {
-    FontAwesomeIcon, About, Projects, Education
+    About, Projects, Education
   }
 });
 </script>

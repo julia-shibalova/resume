@@ -50,7 +50,7 @@ select:focus {outline: none;}
   align-content: center;
 }
  
-.main__banner, .about, .main__projects, .main__edu, .contact {
+.main__banner, .about, .projects, .education, .contact {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -60,7 +60,7 @@ select:focus {outline: none;}
 .arrow {
   position: absolute;
   bottom: 20px;
-  left: 49%;
+  left: calc(50% - 25px);
   font-size: 30px;
   color: $light-gray;
 }

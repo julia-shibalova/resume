@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <div class="main__projects container projects__content">
+    <div class="container projects__content">
       <div class="main__title title" id="projects" v-text="$ml.get('projects_title')"/>
       <span class="projects__content-subtitle">Junior frontend-разработчик / АналитикJunior frontend-разработчик / АналJunior frontend-разработчик / Аналитик итикJunior frontend</span>
 
@@ -10,9 +10,12 @@
           v-on:mouseleave="mouseleave" 
           class="item"
         >
-          <div class="item-shadow" v-show="message">
-            lzlzl
-          </div>
+          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message" >
+            <div class="smooth-arrow">
+              <p>перейти</p>
+              <div class="rightarrow"><span></span></div>
+            </div>
+          </a>
         </div>
 
         <div 
@@ -20,9 +23,12 @@
           v-on:mouseleave="mouseleave1" 
           class="item"
         >
-          <div class="item-shadow" v-show="message1">
-            lzlzllelell
-          </div>
+          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message1" >
+            <div class="smooth-arrow">
+              <p>перейти</p>
+              <div class="rightarrow"><span></span></div>
+            </div>
+          </a>
         </div>
 
         <div 
@@ -30,9 +36,12 @@
           v-on:mouseleave="mouseleave2" 
           class="item"
         >
-          <div class="item-shadow" v-show="message2">
-            lzlzllelelldkldkkdkdk
-          </div>
+          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message2" >
+            <div class="smooth-arrow">
+              <p>перейти</p>
+              <div class="rightarrow"><span></span></div>
+            </div>
+          </a>
         </div>
 
         <div 
@@ -40,9 +49,12 @@
           v-on:mouseleave="mouseleave3" 
           class="item"
         >
-          <div class="item-shadow" v-show="message3">
-            lzlzllelelldldlldlldldlldldlldlldld
-          </div>
+          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message3" >
+            <div class="smooth-arrow">
+              <p>перейти</p>
+              <div class="rightarrow"><span></span></div>
+            </div>
+          </a>
         </div>
 
         <div 
@@ -50,15 +62,18 @@
           v-on:mouseleave="mouseleave4" 
           class="item"
         >
-          <div class="item-shadow" v-show="message4">
-            lzlzllelell;al;a'a;
-          </div>
+          <a href="https://digitalnsk.ru/" target="_blank" class="item-shadow flex-center" v-show="message4" >
+            <div class="smooth-arrow">
+              <p>перейти</p>
+              <div class="rightarrow"><span></span></div>
+            </div>
+          </a>
         </div>
 
       </div>
-      <!--div class="flex-center arrow">
-        <a href="#edu"><font-awesome-icon :icon="['fas', 'arrow-down']" /></a>
-      </div-->
+      <div class="flex-center arrow">
+        <a href="#edu" class="link-arrow"><span></span><span></span></a>
+      </div>
     </div>
 
     
@@ -75,13 +90,20 @@ library.add(faArrowDown);
 */
 export default ({
   name: 'Projects',
-  data: () => ({
-    message: false,
-    message1: false,
-    message2: false,
-    message3: false,
-    message4: false
-  }),
+  data() {
+    return {
+      message: false,
+      message1: false,
+      message2: false,
+      message3: false,
+      message4: false,
+      content: [ {
+        photo: '../../assets/images/me.jpg'
+      }
+
+      ]
+    }
+  },
 
   methods: {
     mouseover: function(){
