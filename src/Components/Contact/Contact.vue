@@ -1,17 +1,16 @@
 <template>
   <div class="contact container flex-center">
     
-
     <div class="contact__feedback" id="contacts">
       <div class="contact__feedback-title title" v-text="$ml.get('contact_title')" />
-      <div class="contact__feedback-subtitle" > rontend-разработчик / Аналитик итикJunior frontend</div>
 
-      <ValidationObserver ref="feedback" tag="form" class="contact__feedback-form flex-center" @submit.prevent="sendForm">
+      <ValidationObserver ref="feedback" tag="form" class="contact__feedback-form flex-center" action="Contact.vue" method="post" @submit.prevent="sendForm">
         
         <div class="contact__feedback-content flex-center">
           <div class="form-group half">
             <input type="text"
                   placeholder="Name"
+                  name="name"
                   v-model="formData.name"
             />
           </div>
@@ -21,7 +20,8 @@
                               rules="required|email"
                               v-slot="{ errors }"
           >
-              <input type="email"
+              <input type="text"
+                    name="email"
                     placeholder="E-mail"
                     :class="{'input-error' : errors[0]}"
                     v-model="formData.email"

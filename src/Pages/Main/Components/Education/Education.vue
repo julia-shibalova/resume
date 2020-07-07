@@ -1,7 +1,7 @@
 <template>
-  <div class="education">
+  <div class="education" id="edu">
     <div class="container">
-      <h2 class="main__title title" id="edu" v-text="$ml.get('education_title')" />
+      <h2 class="main__title title" v-text="$ml.get('education_title')" />
       <div class="education__item">
         <h3 v-text="$ml.get('education_nstu_title')"/>
         <p v-text="$ml.get('education_nstu_fac')"/>

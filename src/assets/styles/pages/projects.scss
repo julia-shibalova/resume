@@ -1,14 +1,8 @@
 .projects {
-  border-top: 1px solid $dark-gray;
-
   &__content {
     text-align: center;
-    &-subtitle {
-      color: $gray;
-    }
-    
     &-items {
-      margin-top: 20px;
+      margin-top: 50px;
       .item {
         position: relative;
         width: 350px; height: 300px; 
@@ -18,37 +12,96 @@
         background-size: cover;
         background-position: center center;
         transition: 1.2s;
-        &__1 {
-          background-image: url('../../assets/images/item1.jpeg');
-        }
-        &__2 {
-          background-image: url('../../assets/images/item2.jpeg');
-        }
-        &__3 {
-          background-image: url('../../assets/images/item3.jpeg');
-        }
-        &__4 {
-          background-image: url('../../assets/images/item4.jpeg');
-        }
-        &__5 {
-          background-image: url('../../assets/images/item5.jpeg');
-        }
-        &-shadow {
+        &__shadow {
           width: 100%; height: 100%;
           background: rgba(0, 0, 0, 0.75);
-          p { 
-            text-transform: uppercase;
-            color: $white;
-            font-weight: 600;
-            margin-right: 10px;
+          text-align: left;
+          flex-direction: column;
+          align-content: flex-start;
+          color: $white;
+          padding: 0 20px;
+          h3 {
+            margin-bottom: 20px;
+            width: 250px!important;
+          }
+          
+          &-subtitle {
+            color: $gray;
+            margin-bottom: 30px;
+            font-size: 14px;
+            width: 250px!important;
           }
         }
+        &__1 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.2)),url('../../assets/images/item1.jpeg');
+        }
+        &__2 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.2)),url('../../assets/images/item2.jpeg');
+        }
+        &__3 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.2)),url('../../assets/images/item3.jpeg');
+        }
+        &__4 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.2)),url('../../assets/images/item4.jpeg');
+        }
+        &__5 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.2)),url('../../assets/images/item5.jpeg');
+        }
+        &__test {
+          background: none;
+          transition: 1.2s;
+          img {
+            width: 60px;
+          }
+          :hover {
+            transform: scale(2);
+          }
+        }
+        
         :hover {
           transform: scale(1.0);
         }
       }
       :hover {
         transform: scale(1.02);
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-little) {
+  .projects {
+    &__content {
+      &-items {
+        .item {
+          width: calc(50% - 16px);
+          &__test {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $tablet) {
+  .projects {
+    &__content {
+      &-items {
+        .item {
+          width: 70%;
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $phone) {
+  .projects {
+    &__content {
+      &-items {
+        .item {
+          width: 100%;
+        }
       }
     }
   }

@@ -17,6 +17,12 @@
     button[type="submit"] {
       min-width: 25px;
       padding: 5px;
+      border: 1px solid transparent;
+      background: $dark;
+      &:last-child {
+        margin-left: 5px;
+      }
+      
     }
   }
   
@@ -24,15 +30,18 @@
 
 @media(max-width: $tablet) {
   .footer {
-    &__lang {
-      margin-right: 45px;
-
-      button[type="submit"] {
-        min-width: 20px;
-        padding: 3px;
-        margin-bottom: 3px;
-        font-size: 14px;
+    &__inner {
+      font-size: 16px;
+      color: $dark-gray;
+      justify-content: center;
+      flex-direction: column-reverse;
+      li {
+        text-align: center;
+        margin-top: 10px;
       }
+    }
+    &__lang {
+
     }
   }
 }

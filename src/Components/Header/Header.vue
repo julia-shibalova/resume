@@ -3,7 +3,7 @@
     <div class="container header__content">
       <div class="header__right flex-end">
         <transition name="show">
-          <HeaderMobile v-if="mobileShow" :links="links" />
+          <HeaderMobile v-if="mobileShow"  />
         </transition>
         
         <div class="header-burger" :class="{'open': mobileShow}" @click="mobileMenu">

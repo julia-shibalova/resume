@@ -1,16 +1,10 @@
 .about {
-  //border-top: 1px solid $dark-gray;
   text-align: center;
-
-  &-subtitle {
-    color: $gray;
-  }
   &__content {
     text-align: left;
     margin-top: 70px;
     &-item {
-      width: calc(50% - 80px);
-      padding: 40px;
+      padding: 0 40px;
       h3 {
         color: $yellow;
         font-weight: 600;
@@ -22,6 +16,37 @@
         :first-child {
           margin-right: 20px;
         }
+      }
+      &:first-child {
+        width: calc(60% - 80px);
+      }
+      &:last-child {
+        width: calc(40% - 80px);
+      }
+    } 
+  }
+}
+@media (max-width: $desktop-big) {
+  .about {
+    &__content {
+      &-item {
+        &:first-child, &:last-child {
+          width: calc(50% - 80px);
+        }
+      }
+    }
+  }
+}
+@media (max-width: $desktop-little) {
+  .about {
+    &__content {
+      margin: 0;
+      flex-direction: column;
+      &-item {
+        &:first-child, &:last-child {
+          width: 90%;
+        }
+        padding: 20px 0;
       }
     }
   }

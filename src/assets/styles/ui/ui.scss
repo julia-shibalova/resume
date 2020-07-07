@@ -4,6 +4,12 @@
   justify-content: space-between;
   font-size: 14px;
   color: $black;
+  width: 150px;
+  p {
+    font-weight: 600;
+    margin-right: 10px;
+    color: $white;
+  }
   .rightarrow {
     width: 45px;
     display: flex;
@@ -43,7 +49,8 @@
   }
   &:hover {
     .rightarrow {
-      width: 50px;
+      //width: 50px;
+      transform: scale(1.02);
     }
   }
 }
@@ -85,11 +92,6 @@
   .smooth-arrow {
     .rightarrow {
       width: 35px;
-    }
-    &:hover {
-      .arrow {
-        width: 40px;
-      }
     }
   }
 }

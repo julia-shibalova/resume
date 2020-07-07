@@ -33,7 +33,7 @@
       cursor: pointer;
     }
     span {
-      background-color: $black;
+      background-color: $light-gray;
       position: absolute;
       border-radius: 2px;
       transition: .3s cubic-bezier(.8, .5, .2, 1.4);
@@ -53,8 +53,10 @@
         width: 70%;
       }
     }
-    &.open span {
-      background-color: $black;
+    &.open div {
+      position: fixed;
+      top: 25px;
+      right: 5%;
     }
     &.open span:nth-child(1){
       transform: rotate(45deg);
@@ -82,40 +84,31 @@
     right: 0;
     width: 100%;
     height: 100vh;
-    padding-top: 100px;
-    background-color: rgba(255, 255, 255, 0.95);
-    color: $black;
+    padding-top: 120px;
+    //background-color: rgba(255, 255, 255, 0.95);
+    //color: $black;
+    color: $light-gray;
+    background: rgba(0, 0, 0, 0.95);
     text-align: center;
+    font-size: 22px;
     li {
       &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
-    &__button {
-      display: none;
-      button[type="submit"] {
-        min-width: 100px;
-        padding: 8px;
-        margin: 10px;
-        font-size: 12px;
-      }
-    }
   }
 }
-
-@media (max-width: $tablet) {
+  
+@media (max-width: $phone) {
   .header {
-    &__logo {
-      width: 70%;
+    &-burger {
+      display: block;
     }
-    &__button {
+    &__links {
       display: none;
     }
-    
-    &-mobile {
-    }
   }
-}      
+}    
 
 
 .show-enter-active, .show-leave-active {

@@ -1,12 +1,9 @@
 .main {
-  &-content {
-    
-  }
   &__title {
     text-align: center;
-    padding-top: 70px;
   }
   &__banner {
+    min-height: 100vh;
     background-size: cover;
     background-image:linear-gradient(rgba(0, 0, 0, 0.5)),url('../../assets/images/me.jpg');
     h2 {
@@ -28,17 +25,42 @@
 
 @media (max-width: $desktop-big) {
   .main {
+    &__banner {
+      &-content {
+        justify-content: flex-start;
+      }
+      &-item {
+        margin-top: 150px;
+      }
+      background-position: -25% center;
+    }
   }
 }
 
 @media (max-width: $desktop-little) {
   .main {
-    
+    &__banner {
+      
+      h2 {
+        font-size: 54px;
+      }
+      p {
+        font-size: 22px;
+      }
+    }
   }
 }
   
 @media (max-width: $tablet) {
   .main {
+    &__banner {
+      &-content {
+        justify-content: center;
+      }
+      background-position: 20% bottom;
+      text-align: center;
+      
+    }
     
   }
 }
